@@ -1,0 +1,228 @@
+
+#root {
+  max-width: 100%;
+  margin: 0 auto;
+  text-align: center;
+  overflow-x: hidden;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+/* Mobile optimizations */
+@media (max-width: 768px) {
+  button, .button {
+    touch-action: manipulation;
+  }
+  
+  input, select, textarea {
+    font-size: 16px; /* Prevents iOS Safari from zooming in */
+  }
+  
+  /* Prevent horizontal overflow on mobile */
+  body, html {
+    overflow-x: hidden;
+    width: 100%;
+  }
+  
+  /* Improve image display on mobile */
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  /* Optimize cart display for mobile */
+  .card {
+    margin-left: 0;
+    margin-right: 0;
+    width: 100%;
+  }
+  
+  /* Ensure buttons are tap-friendly */
+  button, .button, [role="button"] {
+    min-height: 44px;
+    min-width: 44px;
+  }
+}
+
+/* iOS Safari specific fixes */
+@supports (-webkit-touch-callout: none) {
+  .min-h-screen {
+    min-height: -webkit-fill-available;
+  }
+  
+  /* Prevent image stretching on iOS */
+  img {
+    max-height: 100%;
+    object-fit: contain;
+  }
+}
+
+/* Android specific fixes */
+@supports (padding-top: env(safe-area-inset-top)) {
+  body {
+    padding-top: env(safe-area-inset-top);
+    padding-bottom: env(safe-area-inset-bottom);
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
+
+/* Fix for mobile Safari bottom bar */
+@supports (-webkit-touch-callout: none) {
+  .min-h-screen {
+    min-height: -webkit-fill-available;
+  }
+}
+
+/* Fix for header display */
+header .container {
+  width: 100%;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+/* Fix for sticky positioning */
+.fixed {
+  position: fixed !important;
+  width: 100%;
+}
+
+/* Pro Network Carousel Specific Styles */
+.pro-network-carousel .carousel-item-wrapper {
+  transition: transform 0.3s ease;
+}
+
+.pro-network-carousel .carousel-item-wrapper:hover {
+  transform: translateY(-5px);
+}
+
+.pro-network-carousel .embla__slide {
+  transition: opacity 0.3s ease;
+}
+
+.pro-network-carousel .embla__slide:not(.embla__slide--current) {
+  opacity: 0.7;
+}
+
+/* Trust Badges Animation */
+@keyframes pulse-fade {
+  0% { opacity: 0.7; }
+  50% { opacity: 1; }
+  100% { opacity: 0.7; }
+}
+
+.trust-badge {
+  transition: transform 0.2s ease;
+}
+
+.trust-badge:hover {
+  transform: scale(1.05);
+}
+
+/* Cart Value Proposition Styles */
+.value-prop-item {
+  border-left: 2px solid #9b87f5;
+  padding-left: 8px;
+  margin-bottom: 6px;
+}
+
+/* Cart Highlight Animation */
+@keyframes highlight-fade {
+  0% { background-color: rgba(155, 135, 245, 0.2); }
+  100% { background-color: transparent; }
+}
+
+.highlight-fade {
+  animation: highlight-fade 2s ease-out;
+}
+
+/* Glassmorphism effects */
+.glass-card {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Animated gradient borders */
+.gradient-border {
+  position: relative;
+  border-radius: 0.5rem;
+  overflow: hidden;
+}
+
+.gradient-border::before {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  background: linear-gradient(45deg, #00FF7F, #9b87f5, #00FF7F);
+  background-size: 400% 400%;
+  z-index: -1;
+  border-radius: 0.6rem;
+  animation: gradient-animation 6s ease-in-out infinite;
+}
+
+@keyframes gradient-animation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Modern scrollbar styling */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.1);
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(0, 255, 127, 0.5);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(0, 255, 127, 0.7);
+}
